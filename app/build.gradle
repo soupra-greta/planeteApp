@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -29,6 +30,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'io.realm:android-adapters:2.1.1'
-    annotationProcessor 'dk.ilios:realmfieldnameshelper:1.1.1'
+    annotationProcessor 'dk.ilios:realmfieldnameshelper:2.0.0'
 
 }

@@ -28,7 +28,6 @@ import fr.greta60.planeteappgreta60.adapter.RecyclerPlaneteAdapter;
 import fr.greta60.planeteappgreta60.model.Planete;
 import fr.greta60.planeteappgreta60.model.PlaneteFields;
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 public class RecyclerViewActivity extends AppCompatActivity {
@@ -140,7 +139,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 @Override
                 public void execute(Realm realm) {
                     // increment index
-                    Number currentIdNum = realm.where(Planete.class).max(PlaneteFields.ID);
+                    Number currentIdNum = realm.where(Planete.class).max(Planete.FIELD_ID);
                     int nextId;
                     if(currentIdNum == null) {
                         nextId = 1;

@@ -5,6 +5,10 @@ import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class Planete extends RealmObject {
+    public static final String FIELD_ID = "id";
+    public static final String FIELD_NOM = "nom";
+    public static final String FIELD_DISTANCE = "distance";
+    public static final String FIELD_ID_IMAGE = "idImage";
     @PrimaryKey
     private int id;
     @Required
@@ -56,7 +60,7 @@ public class Planete extends RealmObject {
     }
 
     public void setId(int nextId) {
-        this.id = id;
+        this.id = nextId;
     }
 }
 
